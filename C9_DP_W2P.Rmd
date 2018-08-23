@@ -6,6 +6,6 @@ output: html_document
 library(leaflet)
 leaflet() %>% 
   addTiles() %>%
-  addMarkers(lat=50.878535, lng=0.014699, 
-           popup="This is where I park my car everyday")
+  addMarkers(lat=c(50.878535,50.874244), lng=c(0.014699,0.017527), 
+             popup=c("This is where I park my car everyday","I love to sit on the street chair here for lunch"))
 ```
