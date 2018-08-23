@@ -1,0 +1,11 @@
+---
+title: "23 August 2018"
+output: html_document
+---
+```{r,echo=FALSE}
+library(leaflet)
+leaflet() %>% 
+  addTiles() %>%
+  addMarkers(lat=50.878535, lng=0.014699, 
+           popup="This is where I park my car everyday")
+```
