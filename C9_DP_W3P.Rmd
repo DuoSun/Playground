@@ -1,0 +1,23 @@
+---
+title: "DPP Week 3 Assignment"
+author: "Duo Sun"
+date: "26 August 2018"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Diamonds - Price vs Carat + Clarity
+
+```{r, echo=FALSE, message=FALSE}
+library(ggplot2)
+library(caret)
+suppressPackageStartupMessages(library(plotly))
+diamonds <- diamonds[sample(dim(diamonds)[1],size=dim(diamonds)[1]/10),]
+g1 <- ggplot(diamonds, aes(x = carat, y = price, col = clarity)) +
+  geom_point() +
+  geom_smooth()
+ggplotly(g1)
+```
